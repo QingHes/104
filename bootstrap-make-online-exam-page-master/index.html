@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CH">
     <head>
       <meta charset="utf-8">
       <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
       <script src="./jquery-3.2.1.js"></script>        
       <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
       <title>QingHes's test demo</title>
-      
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
       <style>
-        h1{text-align: center;}
-        table{margin-left:8cm;}
-        h3{margin-left:8cm;}
-        ol{margin-left:8cm;}
-        button{margin-left:8cm;}
+      
+      #form1{
+        text-align: center;
+      }
+      .form-control{
+        width:auto;
+      }
+      h1{
+        text-align: center;
+      }
+      ol{
+        margin-left:2cm;
+      }
+      h3{
+        margin-left: 2cm;
+      }
       </style>
-     
+      
+
     </head>
     
     <body> 
@@ -25,76 +37,199 @@
   Launch demo modal
 </button>
 -->
-<div class="container-fluid">
-<div class="TTest">
+<!--div class="form-group">
+          <label class="sr-only" for="cla">class</label>
+          <div class="input-text">考试科目：统一建模语言</div>
+            <td>考试科目：</td>
+            <td></td>
+            <td>时间：</td>
+            <td>100分钟</td>
+            <td>得分:</td>
+            <td>100</td>
+         
+      </div-->
+
+      
+<!--
+overflow:auto
+
+--> 
   <h1>统一建模语言理论测试</h1>
-  <table >
-    <tr>
-      <td>考试科目：</td>
-      <td>统一建模语言</td>
-      <td>时间：</td>
-      <td>100分钟</td>
-      <td>得分:</td>
-      <td>100</td>
-    </tr>
-    <tr>
-    <td><label for="class">班级:</label></td>
-    <td><input type="text" class="class" placeholder="001"></td>    
-    <td><label for="name">姓名:</label></td>
-    <td><input type="text" class="name" placeholder="陈茜"></td>    
-    <td><label for="no.">学号:</label></td>
-    <td><input type="text" class="no." placeholder="761"></td>       
-    </tr>
-  </table>
-  
+  <div class="table-responsive"> 
+      <table class="table" >  
+        <tbody> 
+          <tr> 
+            <td></td> 
+            <td></td> 
+            <td></td></tr> 
+        </tbody> 
+        </table>
+  </div>
+
+    <form id="form1" class="form-inline" role="form" width:auto>   
+      <div class="form-group">
+          <div class="input-group"> 
+            <label class="sr-only" for="cla">class</label>
+            <div class="input-group-addon">考试科目</div> 
+            <input id="cla"class="form-control" type="text" placeholder="统一建模语言" disabled>
+            
+            <label class="sr-only" for="name">name</label>
+            <div id="name" class="input-group-addon">时间</div> 
+            <input class="form-control" type="text" placeholder="100分钟" disabled>
+            
+            <label class="sr-only" for="no">no</label>
+            <div class="input-group-addon">得分</div> 
+            <input id="no" class="form-control" type="text" placeholder="100" disabled> 
+          </div> 
+    </div>
+      <div class="form-group">
+            <div class="input-group"> 
+              <label class="sr-only" for="cla">class</label>
+              <div class="input-group-addon">班级</div> 
+              <input id="cla"class="form-control" type="text" placeholder="001">
+              
+              <label class="sr-only" for="name">name</label>
+              <div id="name" class="input-group-addon">姓名</div> 
+              <input class="form-control" type="text" placeholder="陈茜">
+              
+              <label class="sr-only" for="no">no</label>
+              <div class="input-group-addon">学号</div> 
+              <input id="no" class="form-control" type="text" placeholder="761"> 
+            </div> 
+      </div>
+     
+    </form> 
 
     <div class="TTest-partone">
       <p>
         <h3 class="ma">一、填空题（每空5分，共20分）</h3>
-        <ol>
-          <li><lable for="1.1">UML的中文全称是：</lable>
-            <input type="text" class="1.1" placeholder="统一建模语言"></li>
-          <li><lable for="1.2">对象最突出的特征是：</lable>
-            <input type="text" class="1.2" placeholder="封装性"><input type="text" class="1.2" placeholder="继承性"><input type="text" class="1.2" placeholder="多态性"></li>
+        
+          <ol>
+          <li><form class="form-inline">
+            <lable for="1.1">UML的中文全称是：</lable>
+             <input class="form-control" type="text" class="1.1" placeholder="统一建模语言">
+          </form></li>
+          <li><form class="form-inline">
+            <lable for="1.2">对象最突出的特征是：</lable>
+            <input class="form-control" type="text" class="1.2" placeholder="封装性">
+            <input class="form-control" type="text" class="1.2" placeholder="继承性">
+            <input class="form-control" type="text" class="1.2" placeholder="多态性">
+          </form></li>
         </ol>
+        
+        
       </p>
     </div>
     <div class="TTest-partwo">
       <h3 class="ma">二、选择题（每题10分，共20分）</h3>
       <p>
         <ol>
-          <li>UML与软件工程的关系是：</br></br>
-                <input type="radio" name="1">(A)UML就是软件工程</br>
-                <input type="radio" name="1" checked="true">(B)UML参与到软件工程中软件开发过程的几个阶段</br>
-                <input type="radio" name="1">(C)UML与软件工程无关</br>
-                <input type="radio" name="1">(D)UML是软件工程的一部分</br></br>
+          <li>
+            UML与软件工程的关系是:
+            <div class="radio">
+              <label>
+                <input type="radio" name="1"  value="option1" checked="">
+                (A)UML就是软件工程
+              </label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="1"  value="option2" checked="true">
+                (B)UML参与到软件工程中软件开发过程的几个阶段
+              </label>
+            </div>  
+            <div class="radio">
+                <label>
+                  <input type="radio" name="1"  value="option3" checked="">
+                  (C)UML与软件工程无关
+                </label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="1"  value="option4" checked="">
+                  (D)UML是软件工程的一部分
+                </label>
+              </div>
           </li>
-          <li>Java语言支持：</br></br>
-            <input type="radio" name="2" checked="true">(A)单继承</br>
-            <input type="radio" name="2">(B)多继承</br>
-            <input type="radio" name="2">(C)单继承和多继承都支持</br>
-            <input type="radio" name="2">(D)单继承和多继承都不支持
+          <li>Java语言支持：
+              <div class="radio">
+                <label>
+                  <input type="radio" name="2"  value="option1" checked="true">
+                  (A)单继承
+                </label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="2"  value="option2" checked="">
+                  (B)多继承
+                </label>
+              </div>  
+              <div class="radio">
+                  <label>
+                      <input type="radio" name="2"  value="option3" checked="">
+                      (C)单继承和多继承都支持
+                  </label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="2"  value="option4" checked="">
+                    (D)单继承和多继承都不支持                  
+                  </label>
+                </div>
           </li>
         </ol>
       </p>
-        
-      </form>
+      
+    </form>
     </div>
+
     <div class="TTest-parthree">
         <h3 class="ma">三、多择题（每题10分，共20分）</h3>
         <p>
           <ol>
-            <li>用例的粒度分为以下哪三种：</br></br>
-                  <input type="checkbox" name="3" checked="true">(A)概述级</br>
-                  <input type="checkbox" name="3" checked="true">(B)需求级</br>
-                  <input type="checkbox" name="3">(C)用户目标级</br>
-                  <input type="checkbox" name="3" checked="true">(D)子功能级</br></br>
+            <li>用例的粒度分为以下哪三种：
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="3"  value="option1" checked="true">
+                      (A)概述级
+                    </label>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="3"  value="option2" checked="true">
+                      (B)需求级
+                    </label>
+                  </div>  
+                  <div class="checkbox">
+                      <label>
+                      <input type="checkbox" name="3"  value="option3" >
+                        (C)用户目标级
+                      </label>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="3"  value="option4" checked="true">
+                        (D)子功能级                  
+                      </label>
+                    </div>
             </li>
-            <li>类图由以下哪三部分组成：</br></br>
-              <input type="checkbox" name="4" checked="true">(A)名称(NAME)</br>
-              <input type="checkbox" name="4" checked="true">(B)属性(Attribute）</br>
-              <input type="checkbox" name="4" checked="true">(C)操作(Operation)</br>
-              <input type="checkbox" name="4">(D)方法(Function)
+            <li>类图由以下哪三部分组成:
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="3"  value="option1" checked="true">
+                      (A)名称(NAME)
+                    </label>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="3"  value="option2" checked="true">
+                      (B)属性(Attribute）
+                    </label>
+                  </div>  
+                  <div class="checkbox">
+                      <label>
+                      <input type="checkbox" name="3"  value="option3" checked="true">
+                        (C)操作(Operation)
+                      </label>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="3"  value="option4">
+                        (D)方法(Function)                  
+                      </label>
+                    </div>
             </li>
           </ol>
         </p>
